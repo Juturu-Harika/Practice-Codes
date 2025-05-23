@@ -43,22 +43,26 @@ ll3=ll()
 def summll(ll1,ll2,ll3):
     temp1,temp2=ll1.head,ll2.head
     carry=0
-    while temp1.next!=None or temp2.next!=None:
+    while temp1!=None or temp2!=None:
         temp3=temp1.value+temp2.value+carry
         if temp3>9:
             temp3=temp3-10
             carry=1
         else:
             carry=0
-        temp1=temp1.next
-        temp2=temp2.next
+         if temp1 is not None:
+            temp1 = temp1.next
+        if temp2 is not None:
+            temp2 = temp2.next
         ll3.add(node(temp3))
-    
+    if carry:
+        ll3.add(carry)
     ll3.display()
     
 summll(ll1,ll2,ll3)
 
-
+#output
+#5->5->0->1
 
     
         
