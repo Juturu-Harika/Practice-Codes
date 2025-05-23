@@ -3,13 +3,23 @@
 #231 -> 312
 
 def greater(n):
-    s=[]
-    for i in str(n):
-        s.append(int(i))
-    for i in range(len(s)-1,-1,-1):
-        if s[i]>s[i-1]:
-            s[i-1],s[-1]=s[-1],s[i-1]
+    s = list(map(int, str(n)))
+    length = len(s)
+    for i in range(length - 2, -1, -1):
+        if s[i] < s[i + 1]:
             break
-    print(s)
-greater(97379325)
+    else:
+        print(n)
+        return
+    for j in range(length - 1, i, -1):
+        if s[j] > s[i]:
+            s[i], s[j] = s[j], s[i]
+            break
+    s[i + 1:] = s[i + 1:][::-1]
+    result = int("".join(map(str, s)))
+    print(result)
+greater(967)
+
+#output:
+#976
             
