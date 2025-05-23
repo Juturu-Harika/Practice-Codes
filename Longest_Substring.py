@@ -18,6 +18,8 @@ while r<len(s)+1:
     else:
         r+=1
 print(m)
-        
+
+#output:
+#11
     
     
