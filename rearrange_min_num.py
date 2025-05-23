@@ -20,3 +20,6 @@ def find_min(num):
         res.extend([str(i)] * count[i])
     return ("".join(res))
 print(find_min(5022221))
+
+#output:
+#0122225
