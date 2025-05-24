@@ -12,7 +12,7 @@ def close_strings(w1,w2):
     else:
         w1_count=Counter(w1)
         w2_count=Counter(w2)
-        if sorted(w1_count.values())==sorted(w2_count.values()) and set(w1_count.keys())==set(w2_count.keys()):
+        if Counter(w1_count.values())==Counter(w2_count.values()) and set(w1_count.keys())==set(w2_count.keys()):
             print('true')
         else:
             print('false')
